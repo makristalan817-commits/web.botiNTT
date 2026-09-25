@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Website edukasi Suku Boti, Timor Tengah Selatan, Nusa Tenggara Timur.">
+<title>Suku Boti | Warisan Budaya Timor</title>
+<style>
+:root{--c:#5b3523;--c2:#8b5a3c;--cream:#fbf7ef;--sand:#ead6b8;--dark:#251a14;--muted:#6e6259;--green:#526b48}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--cream);line-height:1.7}
+a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#fffaf4ee;backdrop-filter:blur(10px);border-bottom:1px solid #e5d8c7}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px}.logo b{display:grid;place-items:center;width:42px;height:42px;background:var(--c);color:white;border-radius:50%}.logo strong{display:block;letter-spacing:1px}.logo small{display:block;color:var(--muted);font-size:11px}
+nav{display:flex;gap:4px}nav a{padding:9px 11px;border-radius:9px;font-size:14px;color:#594c43}nav a:hover,nav a.on{background:var(--sand);color:var(--c);font-weight:bold}
+.menu{display:none;background:none;border:0;font-size:27px;color:var(--c)}
+.hero{color:white;background:linear-gradient(125deg,#4a291b,#9b6544);padding:85px 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}.tag{text-transform:uppercase;letter-spacing:2px;font-size:12px;color:#f1d9b9;font-weight:bold}
+h1{font-size:clamp(42px,6vw,70px);line-height:1.05;margin:12px 0 20px}.hero p{font-size:18px;color:#f5e7d7;max-width:680px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{padding:12px 18px;border-radius:11px;font-weight:bold;display:inline-block}.primary{background:#fff;color:var(--c)}.outline{border:1px solid #ead8c5;color:white}
+.art{height:330px;border:1px solid #ffffff40;border-radius:25px;background:linear-gradient(#e6c18f 0 46%,#61784e 46% 72%,#405b3b 72%);position:relative;overflow:hidden}
+.sun{position:absolute;right:55px;top:35px;width:70px;height:70px;background:#efad55;border-radius:50%}
+.hill{position:absolute;bottom:85px;width:140%;height:150px;background:#76553e;border-radius:50% 50% 0 0/100% 100% 0 0;left:-20%}
+.house{position:absolute;bottom:55px;left:35%;width:180px;height:115px;background:#a66f4a;transform:perspective(200px) rotateX(2deg)}
+.house:before{content:"";position:absolute;left:-22px;top:-75px;border-left:112px solid transparent;border-right:112px solid transparent;border-bottom:85px solid #593525}
+.house:after{content:"";position:absolute;width:38px;height:65px;background:#553224;left:71px;bottom:0}
+section{padding:70px 0}.alt{background:#f0e4d2}.head{max-width:750px;margin-bottom:30px}.head h2,h2{font-size:36px;line-height:1.2;margin-bottom:10px}.head p,p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid #e6dacb;border-radius:17px;padding:24px;box-shadow:0 10px 30px #4b2f1a10}.icon{width:50px;height:50px;border-radius:13px;background:var(--sand);display:grid;place-items:center;font-size:23px}.card h3{margin:10px 0 6px;font-size:21px}.card a{display:inline-block;margin-top:12px;color:var(--c);font-weight:bold}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.visual{background:white;border-radius:20px;padding:12px;border:1px solid #e6dacb}.visual-art{height:360px;border-radius:14px;background:linear-gradient(180deg,#e6d0ae,#c8a77e 52%,#5c744c 52%);position:relative;overflow:hidden}
+.visual-art .roof{position:absolute;left:22%;top:100px;border-left:150px solid transparent;border-right:150px solid transparent;border-bottom:125px solid var(--c)}.visual-art .box{position:absolute;left:29%;top:210px;width:42%;height:125px;background:#b87e54}.visual-art .door{position:absolute;left:46%;top:265px;width:50px;height:70px;background:#513124}
+.list{list-style:none;display:grid;gap:14px;margin-top:20px}.list li{display:flex;gap:10px}.list li b{color:var(--c)}
+.quote{margin-top:22px;padding:18px 20px;border-left:5px solid var(--c2);background:#f1e5d6;border-radius:0 12px 12px 0}
+.timeline{border-left:3px solid var(--sand);padding-left:25px;display:grid;gap:25px}.time{position:relative}.time:before{content:"";position:absolute;left:-34px;top:9px;width:13px;height:13px;background:var(--c);border:3px solid var(--cream);border-radius:50%}.time h3{margin-bottom:4px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.gallery .g{height:230px;border-radius:15px;padding:20px;display:flex;align-items:end;color:white;font-weight:bold;background:linear-gradient(145deg,#a56d49,#526b48)}.g:nth-child(2){background:linear-gradient(145deg,#c89b67,#5b3523)}.g:nth-child(3){background:linear-gradient(145deg,#6b3c29,#e0b879)}.g:nth-child(4){background:linear-gradient(145deg,#80966b,#334b32)}.g:nth-child(5){background:linear-gradient(145deg,#b9825d,#3f5b3a)}.g:nth-child(6){background:linear-gradient(145deg,#d7b47e,#6e513e)}
+.sources{display:grid;gap:12px}.source{padding:18px;background:white;border:1px solid #e6dacb;border-radius:13px}.source a{color:var(--c);font-weight:bold}
+footer{background:#291c16;color:#d9cbbf;padding-top:45px}.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px;padding-bottom:35px}.foot h3,.foot h4{color:white;margin-bottom:10px}.foot p,.foot a{color:#c4b5aa;font-size:14px}.foot a{display:block;margin:5px 0}.copy{border-top:1px solid #4b3930;padding:15px 0;font-size:13px;color:#a9998d}
+@media(max-width:850px){nav{display:none;position:absolute;top:68px;left:4%;right:4%;background:white;padding:10px;border-radius:13px;box-shadow:0 12px 30px #0002;flex-direction:column}nav.show{display:flex}.menu{display:block}.hero-grid,.split{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.foot{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.cards,.gallery,.foot{grid-template-columns:1fr}.hero{padding:60px 0}section{padding:52px 0}h1{font-size:43px}h2,.head h2{font-size:29px}.art{height:280px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#beranda"><b>B</b><span><strong>SUKU BOTI</strong><small>Warisan Budaya Timor</small></span></a>
+<button class="menu" onclick="document.querySelector('nav').classList.toggle('show')">☰</button>
+<nav>
+<a href="#beranda">Beranda</a><a href="#sejarah">Sejarah</a><a href="#budaya">Budaya</a><a href="#rumah">Rumah Adat</a><a href="#kehidupan">Kehidupan</a><a href="#galeri">Galeri</a><a href="#sumber">Sumber</a>
+</nav></div></header>
+
+<main>
+<section id="beranda" class="hero"><div class="wrap hero-grid">
+<div><span class="tag">Timor Tengah Selatan · NTT</span><h1>Mengenal Suku Boti dan Warisan Budayanya</h1><p>Website edukasi mengenai sejarah, budaya, arsitektur, kehidupan sosial, dan kearifan lokal masyarakat Boti secara informatif dan menghormati konteks adat.</p><div class="buttons"><a class="btn primary" href="#sejarah">Mulai Menjelajah</a><a class="btn outline" href="#budaya">Pelajari Budaya</a></div></div>
+<div class="art"><div class="sun"></div><div class="hill"></div><div class="house"></div></div>
+</div></section>
+
+<section><div class="wrap"><div class="head"><span class="tag" style="color:#8b5a3c">Tentang</span><h2>Warisan lokal yang hidup</h2><p>Suku Boti dikenal sebagai komunitas adat di Desa Boti, Kecamatan Ki'e, Kabupaten Timor Tengah Selatan, Nusa Tenggara Timur. Budayanya mencakup hubungan sosial, lingkungan, nilai, pengetahuan, dan tradisi yang diwariskan antargenerasi.</p></div>
+<div class="cards">
+<article class="card"><div class="icon">⌂</div><h3>Rumah Adat</h3><p>Mengenal lopo dan karakter arsitektur tradisional dengan material alami.</p><a href="#rumah">Lihat selengkapnya →</a></article>
+<article class="card"><div class="icon">✦</div><h3>Budaya & Halaika</h3><p>Mengenal sistem kepercayaan, kosmologi waktu, dan nilai kehidupan.</p><a href="#budaya">Pelajari →</a></article>
+<article class="card"><div class="icon">♧</div><h3>Alam & Kehidupan</h3><p>Hubungan masyarakat dengan pertanian, kerajinan, lingkungan, dan kebersamaan.</p><a href="#kehidupan">Jelajahi →</a></article>
+</div></div></section>
+
+<section id="sejarah" class="alt"><div class="wrap split"><div class="visual"><div class="visual-art"></div></div><div><span class="tag" style="color:#8b5a3c">01 · Profil</span><h2>Sejarah & Profil Suku Boti</h2><p>Masyarakat Boti berada di Desa Boti, Kecamatan Ki'e, Kabupaten Timor Tengah Selatan, NTT. Boti merupakan komunitas adat di Pulau Timor dengan tradisi dan tata kehidupan yang diwariskan antargenerasi.</p><p style="margin-top:12px">Sejumlah penelitian membahas Boti Dalam dan Boti Luar untuk menjelaskan perbedaan pengalaman sosial-budaya, termasuk pengaruh agama formal, pendidikan, dan perkembangan sosial.</p><div class="quote">Memahami Boti berarti memahami budaya sebagai hubungan antara manusia, lingkungan, nilai, pengetahuan, dan kehidupan bersama.</div></div></div></section>
+
+<section id="budaya"><div class="wrap"><div class="head"><span class="tag" style="color:#8b5a3c">02 · Kearifan Lokal</span><h2>Budaya, Halaika & Nilai Kehidupan</h2><p>Pengantar mengenai sistem kepercayaan leluhur, kosmologi, tradisi lisan, dan nilai hubungan manusia dengan alam.</p></div>
+<div class="cards"><article class="card"><div class="icon">☀</div><h3>Uis Neno</h3><p>Dalam pembahasan Halaika, Uis Neno berkaitan dengan kekuatan atau penguasa langit.</p></article><article class="card"><div class="icon">◉</div><h3>Uis Pah</h3><p>Berkaitan dengan bumi dan kehidupan dunia dalam kosmologi kepercayaan leluhur.</p></article><article class="card"><div class="icon">♢</div><h3>Nitu</h3><p>Sejumlah sumber menjelaskan penghormatan terhadap arwah leluhur sebagai bagian dari sistem kepercayaan.</p></article></div>
+<div class="split" style="margin-top:45px"><div><h2>Siklus waktu sembilan hari</h2><p>Penelitian tentang kosmologi waktu Boti menjelaskan konsep siklus sembilan hari yang disebut <em>Neon</em>. Waktu dapat memiliki makna yang berhubungan dengan adat, ritual, dan tata kehidupan.</p><ul class="list"><li>✓ <div><b>Waktu sebagai siklus</b><br>Memiliki makna budaya, bukan hanya hitungan linear.</div></li><li>✓ <div><b>Hubungan manusia dan alam</b><br>Menekankan keseimbangan kehidupan sosial dan lingkungan.</div></li><li>✓ <div><b>Hari adat</b><br>Hari tertentu dapat memiliki aturan dan makna khusus.</div></li></ul></div><div class="visual"><div class="visual-art" style="background:linear-gradient(180deg,#dbe5cf,#8da071 52%,#405b3b 52%)"></div></div></div>
+<div class="quote">Catatan etika: tidak semua ritual atau ruang adat bersifat terbuka untuk umum. Dokumentasi digital sebaiknya dilakukan dengan izin dan menghormati keputusan komunitas adat.</div>
+</div></section>
+
+<section id="rumah" class="alt"><div class="wrap split"><div><span class="tag" style="color:#8b5a3c">03 · Arsitektur</span><h2>Rumah Adat & Lopo</h2><p>Lopo merupakan bagian dari arsitektur tradisional Boti yang menjadi perhatian dalam kajian arsitektur dan etnomatematika. Material alami, struktur bangunan, dan proses pembangunannya dapat dikaji bersama konteks budaya.</p><ul class="list"><li>✓ <div><b>Struktur</b><br>Susunan tiang, rangka, dan atap menunjukkan teknik konstruksi tradisional.</div></li><li>✓ <div><b>Material alami</b><br>Material dari lingkungan sekitar menjadi bagian dari karakter bangunan.</div></li><li>✓ <div><b>Makna budaya</b><br>Arsitektur dapat berkaitan dengan nilai dan aturan yang menyertainya.</div></li></ul></div><div class="visual"><div class="visual-art"><div class="roof"></div><div class="box"></div><div class="door"></div></div></div></div></section>
+
+<section id="kehidupan"><div class="wrap"><div class="head"><span class="tag" style="color:#8b5a3c">04 · Kehidupan</span><h2>Kehidupan Sosial & Ekonomi</h2></div><div class="cards"><article class="card"><div class="icon">🌾</div><h3>Pertanian</h3><p>Pertanian menjadi bagian penting kehidupan masyarakat Boti. Pengetahuan tentang lahan dan musim membantu menghadapi kondisi lingkungan Timor.</p></article><article class="card"><div class="icon">🧵</div><h3>Tenun</h3><p>Tenun dan pakaian tradisional merupakan bagian dari identitas budaya Timor serta media pewarisan pengetahuan.</p></article><article class="card"><div class="icon">🤝</div><h3>Kebersamaan</h3><p>Hubungan antaranggota komunitas dan aturan adat menjadi bagian dari keteraturan sosial.</p></article></div><div class="split" style="margin-top:45px"><div class="visual"><div class="visual-art" style="background:repeating-linear-gradient(0deg,#6b3c29 0 35px,#e0b879 35px 70px,#3f5b3a 70px 105px)"></div></div><div><h2>Beradaptasi dengan alam</h2><p>Pengetahuan lokal tentang tanaman, ternak, pangan, dan musim merupakan bagian dari strategi kehidupan di lingkungan NTT yang memiliki kondisi kering.</p><div class="quote">Perbedaan Boti Dalam dan Boti Luar perlu dipahami sebagai konteks sosial-budaya yang dapat berubah, bukan sebagai penggolongan sederhana terhadap setiap individu.</div></div></div></div></section>
+
+<section id="galeri" class="alt"><div class="wrap"><div class="head"><span class="tag" style="color:#8b5a3c">05 · Visual</span><h2>Galeri Ilustrasi</h2><p>Ilustrasi dibuat langsung di dalam file website sehingga tidak membutuhkan folder gambar tambahan.</p></div><div class="gallery"><div class="g">Lanskap Boti</div><div class="g">Rumah Adat / Lopo</div><div class="g">Tenun Tradisional</div><div class="g">Alam Timor</div><div class="g">Kehidupan Komunitas</div><div class="g">Warisan Budaya</div></div></div></section>
+
+<section id="sumber"><div class="wrap"><div class="head"><span class="tag" style="color:#8b5a3c">Referensi</span><h2>Sumber Informasi</h2><p>Beberapa sumber yang digunakan sebagai dasar penyusunan konten website.</p></div><div class="sources">
+<div class="source"><b>Universitas Nusa Cendana — Floresiensis (2025)</b><p>Persepsi Masyarakat Suku Boti Terhadap Agama dan Pendidikan di Desa Boti.</p><a href="https://ejurnal.undana.ac.id/index.php/floresiensis/article/view/17757" target="_blank">Buka sumber ↗</a></div>
+<div class="source"><b>RRI (25 Februari 2026)</b><p>Sistem Kepercayaan, Perkawinan, dan Sanksi Adat Suku Boti.</p><a href="https://rri.co.id/atambua/features/2211173/sistem-kepercayaan-perkawinan-dan-sanksi-adat-suku-boti" target="_blank">Buka sumber ↗</a></div>
+<div class="source"><b>Kemendikdasmen</b><p>Dokumentasi mengenai masyarakat adat Boti dan konteks sosial-budayanya.</p><a href="https://repositori.kemendikdasmen.go.id/26011/1/KMAMAJALAHMITIGASI.pdf" target="_blank">Buka sumber ↗</a></div>
+<div class="source"><b>Journal of Architecture and Human Experience (2023)</b><p>Transformasi Arsitektur sebagai Pendekatan Desain Kapela di Desa Boti.</p><a href="https://garuda.kemdiktisaintek.go.id/documents/detail/3889523" target="_blank">Buka sumber ↗</a></div>
+</div></div></section>
+</main>
+
+<footer><div class="wrap foot"><div><h3>Suku Boti</h3><p>Website edukasi tentang budaya, kehidupan, arsitektur, dan kearifan lokal masyarakat Boti.</p></div><div><h4>Navigasi</h4><a href="#sejarah">Sejarah</a><a href="#budaya">Budaya</a><a href="#rumah">Rumah Adat</a><a href="#kehidupan">Kehidupan</a></div><div><h4>Lokasi</h4><p>Desa Boti, Kecamatan Ki'e<br>Timor Tengah Selatan<br>Nusa Tenggara Timur</p></div></div><div class="copy"><div class="wrap">© 2026 Website Suku Boti · Untuk tujuan edukasi.</div></div></footer>
+</body>
+</html>
